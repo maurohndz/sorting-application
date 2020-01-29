@@ -1,0 +1,10 @@
+.Container__bars{
+    width: 100%;
+}
+
+.Bars__block{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,68 @@
+.Header{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.Header__title{
+    background-color: #130f40;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    color: white;
+}
+.Header__config{
+    background-color: white;
+    width: 100%;    
+}
+.Header__container{
+    width: 80%;
+    margin: auto;
+    display: flex;    
+    padding: 15px 0px;
+}
+
+.Container_btn-start{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.Container_input-large{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Container_input-select{
+    width: 40%;
+    display: flex;
+    align-items: center;   
+}
+
+.Container_btn-start > button{
+    padding: 6px 25px;
+    background-color: #eb4d4b;
+    border: solid 1px #eb4d4b;
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Container_input-large > input{
+    height: 20px;
+    border-radius: 5px;
+    border: solid 2px #dbdbdb;
+    padding: 3px 8px;
+}
+.label_input{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 10px;
+}
+
+.Container_input-select > select{
+    height: 30px;
+    border-radius: 5px;
+    border: solid 2px #dbdbdb;
+    padding: 3px 8px;
+    width: 165px;
+}
