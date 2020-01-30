@@ -3,10 +3,15 @@ import Header from './header';
 import Bars from './Bars';
 
 const Layout = (props) => {
+    const {
+        barsArray,
+        generateArray,
+    } = props;
+
     return(
         <div>
-            <Header />
-            <Bars />
+            <Header generateArray={generateArray} />
+            <Bars barsArray={barsArray} />
         </div>
     );
 }

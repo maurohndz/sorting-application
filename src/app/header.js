@@ -2,6 +2,16 @@ import React from 'react';
 import './css/header.css';
 
 const Header = (props) => {
+    
+    const {
+        generateArray,
+    } = props;
+
+    const handelChangeNum = (e) => {
+        generateArray(e.target.value);
+      
+    }
+
     return(
         <div className="Header" >
             <div className="Header__title" >
@@ -11,7 +21,7 @@ const Header = (props) => {
                 <div className="Header__container" >
                     <div className="Container_input-large" >
                         <label className="label_input" >Number of bars: </label>
-                        <input type="number"  placeholder="max 50 bars" />
+                        <input type="number"  placeholder="max 50 bars" onChange={handelChangeNum}  />
                     </div>
                     <div className="Container_btn-start" >
                         <button>Start</button>

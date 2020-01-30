@@ -3,14 +3,25 @@ import Bar from './Bar';
 import './css/Bars.css';
 
 const Bars = (props) => {
+    const {
+        barsArray
+    } = props;
+    
+    const generateContent = () => {
+        return(
+            <div className="Bars__block" >
+                {
+                    barsArray.map((htl, key)=>(
+                        <Bar htl={htl} key={key} />
+                    ))
+                }
+            </div>
+        )
+    }
 
     return(
-        <div className="Container__bars" >
-            <div className="Bars__block" >
-                <Bar htl={200} />
-                <Bar htl={300} />
-                <Bar htl={400} />
-            </div>
+        <div className="Container__bars" >           
+            {generateContent()}
         </div>
     );
 }
