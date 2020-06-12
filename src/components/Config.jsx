@@ -2,6 +2,7 @@ import React, { Component } from "react";
 /*___ Components ___*/
 import ButtonAlgorithm from "./ButtonAlgorithm";
 import StartApp from "./StartApp";
+import Range from "./Range";
 /*___ Styles ___*/
 import "./styles/Config.css";
 
@@ -17,6 +18,7 @@ class Config extends Component {
             <br />
             Algorithm
           </h1>
+          <Range />
           <ButtonAlgorithm />
           <StartApp />
         </div>
