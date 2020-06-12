@@ -2,7 +2,7 @@ import { UPDATE_DATA } from "../types/index.types";
 
 export const generate = () => (dispatch) => {
   var newData = [];
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 5; i++) {
     let val = parseInt(Math.random() * (50 - 10) + 10);
     newData.push(val);
   }
