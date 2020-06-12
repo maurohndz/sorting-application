@@ -2,6 +2,7 @@
 import { UPDATE_DATA, UPDATE_ALGORITHM_SELECT } from "../types/index.types";
 
 const INITIAL_STATE = {
+  working: false,
   values: [],
   algorithm: [
     { title: "Bubble Sort", key: "bubble" },

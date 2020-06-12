@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-/*___ actions ___*/
-import * as utilitiesActions from "../actions/utilitiesActions";
 /*___ styles ___*/
 import "./styles/ButtonAlgorithm.css";
-/*___ select actions ___*/
+/*___ actions ___*/
+import * as utilitiesActions from "../actions/utilitiesActions";
 const { updateAlgorithmSelect } = utilitiesActions;
 
 class ButtonAlgorithm extends Component {
@@ -23,7 +22,10 @@ class ButtonAlgorithm extends Component {
       <div className="typesAlgorithm">
         {this.props.algorithm.map((algo, key) => {
           const setValue = () => {
-            this.selectAlgorithm(algo.key);
+            //check if the application has an active algorithm
+            if (!this.props.working) {
+              this.selectAlgorithm(algo.key);
+            }
           };
           if (this.props.algorithm_select === algo.key) {
             return (
