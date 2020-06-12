@@ -5,8 +5,8 @@
 .typesAlgorithm-btn {
   display: block;
   width: 100%;
-  background-color: var(--blue-dark);
-  border: 1px solid var(--blue-dark);
+  background-color: var(--gray);
+  border: 1px solid var(--gray);
   color: #ffffff;
   padding: 0.5em 0;
   font-size: 1em;

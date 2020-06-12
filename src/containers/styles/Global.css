@@ -1,7 +1,7 @@
 :root {
   --primary: #2b2b2b;
-  --blue-dark: #1564e8;
-  --green-primary: #16dba6;
+  --gray: #666666;
+  --green-primary: #0ed69d;
 }
 * {
   margin: 0;
