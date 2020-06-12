@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-/*___ ___*/
+/*___ actions ___*/
+import * as utilitiesActions from "../actions/utilitiesActions";
+/*___ styles ___*/
+import "./styles/ButtonAlgorithm.css";
+/*___ select actions ___*/
+const { updateAlgorithmSelect } = utilitiesActions;
 
-class TypesAlgorithm extends Component {
+class ButtonAlgorithm extends Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +15,7 @@ class TypesAlgorithm extends Component {
   }
 
   selectAlgorithm = (key) => {
-    console.log(key);
+    this.props.updateAlgorithmSelect(key);
   };
 
   generateButtons = () => {
@@ -55,4 +60,8 @@ class TypesAlgorithm extends Component {
 /*___ mapStateToProps ___*/
 const mapStateToProps = ({ dataReducer }) => dataReducer;
 
-export default connect(mapStateToProps)(TypesAlgorithm);
+const mapDispatchToProps = {
+  updateAlgorithmSelect,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonAlgorithm);

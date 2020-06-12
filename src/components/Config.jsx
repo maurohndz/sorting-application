@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 /*___ Components ___*/
-import TypesAlgorithm from "./TypesAlgorithm";
+import ButtonAlgorithm from "./ButtonAlgorithm";
 /*___ Styles ___*/
 import "./styles/Config.css";
 
@@ -16,7 +16,7 @@ class Config extends Component {
             <br />
             Algorithm
           </h1>
-          <TypesAlgorithm />
+          <ButtonAlgorithm />
         </div>
       </React.Fragment>
     );
