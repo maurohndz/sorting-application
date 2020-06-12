@@ -3,6 +3,8 @@ import { UPDATE_DATA } from "../types/index.types";
 
 const INITIAL_STATE = {
   values: [],
+  algorithm: [{ title: "Bubble Sort", key: "bubble" }],
+  algorithm_select: "bubble",
 };
 
 /*___ Case ____*/
