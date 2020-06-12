@@ -8,7 +8,15 @@ class StartApp extends Component {
   }
 
   render() {
-    return <React.Fragment></React.Fragment>;
+    return (
+      <React.Fragment>
+        <div className="StartApp">
+          <button type="button" className="u-btn">
+            Sorting
+          </button>
+        </div>
+      </React.Fragment>
+    );
   }
 }
 

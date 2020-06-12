@@ -3,8 +3,6 @@
   grid-row-gap: 0.9em;
 }
 .typesAlgorithm-btn {
-  display: block;
-  width: 100%;
   background-color: var(--gray);
   border: 1px solid var(--gray);
   color: #ffffff;

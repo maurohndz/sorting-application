@@ -29,7 +29,7 @@ class ButtonAlgorithm extends Component {
             return (
               <button
                 type="button"
-                className="typesAlgorithm-btn select"
+                className="u-btn typesAlgorithm-btn select"
                 key={key}
                 onClick={setValue}
               >
@@ -40,7 +40,7 @@ class ButtonAlgorithm extends Component {
             return (
               <button
                 type="button"
-                className="typesAlgorithm-btn"
+                className="u-btn typesAlgorithm-btn"
                 key={key}
                 onClick={setValue}
               >
