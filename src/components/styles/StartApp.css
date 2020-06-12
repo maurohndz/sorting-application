@@ -1,0 +1,6 @@
+.startApp-btn {
+  width: 80% !important;
+  margin: auto !important;
+  background: var(--pink);
+  color: white;
+}

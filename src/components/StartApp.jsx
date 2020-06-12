@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+/*___ styles ___*/
+import "./styles/StartApp.css";
 
 class StartApp extends Component {
   constructor(props) {
@@ -11,7 +13,7 @@ class StartApp extends Component {
     return (
       <React.Fragment>
         <div className="StartApp">
-          <button type="button" className="u-btn">
+          <button type="button" className="u-btn startApp-btn">
             Sorting
           </button>
         </div>

@@ -2,6 +2,7 @@
   --primary: #2b2b2b;
   --gray: #666666;
   --green-primary: #0ed69d;
+  --pink: #fa5858;
 }
 * {
   margin: 0;
@@ -11,11 +12,12 @@
 }
 /*___ utilities ___*/
 .u-btn {
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 0.5em 0;
   font-size: 1.1em;
   border-radius: 15px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
