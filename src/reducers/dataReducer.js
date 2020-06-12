@@ -3,9 +3,11 @@ import {
   UPDATE_DATA,
   UPDATE_ALGORITHM_SELECT,
   UPDATE_WORKING,
+  UPDATE_AMOUNT,
 } from "../types/index.types";
 
 const INITIAL_STATE = {
+  amount_of_values: 20,
   working: false,
   values: [],
   algorithm: [
@@ -34,6 +36,13 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         working: !state.working,
+      };
+
+    case UPDATE_AMOUNT:
+      return {
+        ...state,
+        amount_of_values: action.payload.data.amount,
+        values: action.payload.data.amount_of_values,
       };
 
     default:
