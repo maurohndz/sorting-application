@@ -1,15 +1,13 @@
 /*___ types ___*/
-import { UPDATE_DATA } from "../types/index.types";
+import { UPDATE_DATA, UPDATE_WORKING } from "../types/index.types";
 /*___ utilities ___*/
 import { checkData } from "../utilities/checkData";
 
 export const bubbleSort = () => (dispatch, getState) => {
   var next_number = 1;
   var number_position = 0;
-  // let { values } = getState().dataReducer;
-  // console.log(checkData(values));
+
   var bubbleInterval = setInterval(() => {
-    console.log("_");
     let { values } = getState().dataReducer;
     let aux;
     if (!checkData(values)) {
@@ -36,6 +34,9 @@ export const bubbleSort = () => (dispatch, getState) => {
       console.log(getState().dataReducer.values);
     } else {
       clearInterval(bubbleInterval);
+      dispatch({
+        type: UPDATE_WORKING,
+      });
     }
   }, 1000);
 };

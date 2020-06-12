@@ -4,17 +4,18 @@ import { connect } from "react-redux";
 import "./styles/StartApp.css";
 /*___ actions ___*/
 import { bubbleSort } from "../actions/bubbleSort";
+import { updateWorking } from "../actions/utilitiesActions";
 
 class StartApp extends Component {
   constructor(props) {
     super(props);
-
     this.state = {};
   }
 
   startSorting = () => {
     //check if the application has an active algorithm
     if (!this.props.working) {
+      this.props.updateWorking(); //change application status
       let algorithm = this.props.algorithm_select;
       // select algorithm
       switch (algorithm) {
@@ -46,6 +47,6 @@ class StartApp extends Component {
 /*___ mapStateToProps ___*/
 const mapStateToProps = ({ dataReducer }) => dataReducer;
 /*___ mapDispatchToProps ___*/
-const mapDispatchToProps = { bubbleSort };
+const mapDispatchToProps = { bubbleSort, updateWorking };
 
 export default connect(mapStateToProps, mapDispatchToProps)(StartApp);

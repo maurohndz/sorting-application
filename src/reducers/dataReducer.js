@@ -1,5 +1,9 @@
 /*___ Types ____*/
-import { UPDATE_DATA, UPDATE_ALGORITHM_SELECT } from "../types/index.types";
+import {
+  UPDATE_DATA,
+  UPDATE_ALGORITHM_SELECT,
+  UPDATE_WORKING,
+} from "../types/index.types";
 
 const INITIAL_STATE = {
   working: false,
@@ -24,6 +28,12 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         algorithm_select: action.payload,
+      };
+
+    case UPDATE_WORKING:
+      return {
+        ...state,
+        working: !state.working,
       };
 
     default:
