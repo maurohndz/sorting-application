@@ -1,15 +1,11 @@
 .typesAlgorithm {
-  display: grid;
-  grid-row-gap: 0.9em;
+  height: 60vh;
 }
 .typesAlgorithm-btn {
   background-color: var(--gray);
   border: 1px solid var(--gray);
   color: #ffffff;
-  padding: 0.5em 0;
-  font-size: 1em;
-  border-radius: 15px;
-  outline: none;
+  margin-bottom: 0.8em;
 }
 .select {
   background-color: var(--green-primary);

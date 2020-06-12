@@ -11,6 +11,11 @@
 }
 /*___ utilities ___*/
 .u-btn {
-  display: block;
+  display: inline-block;
   width: 100%;
+  padding: 0.5em 0;
+  font-size: 1.1em;
+  border-radius: 15px;
+  outline: none;
+  border: none;
 }
