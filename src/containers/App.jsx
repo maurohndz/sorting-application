@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 /*___ Components ___*/
 import Config from "../components/Config";
+import Bars from "../components/Bars";
 /*___ Styles ___*/
 import "./styles/Global.css";
 
@@ -12,6 +13,7 @@ class App extends React.Component {
       <React.Fragment>
         <div className="App">
           <Config />
+          <Bars />
         </div>
       </React.Fragment>
     );

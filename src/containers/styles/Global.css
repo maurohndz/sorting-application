@@ -3,12 +3,16 @@
   --gray: #666666;
   --green-primary: #0ed69d;
   --pink: #fa5858;
+  --bars-color: #0075ff;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+}
+.App {
+  display: flex;
 }
 /*___ utilities ___*/
 .u-btn {

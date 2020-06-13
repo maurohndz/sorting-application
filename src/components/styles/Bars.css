@@ -1,0 +1,14 @@
+.bars {
+  height: 100vh;
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 20px;
+}
+.bars-item {
+  width: 10%;
+  max-width: 50px;
+  background-color: var(--bars-color);
+  margin: 0 3px;
+}

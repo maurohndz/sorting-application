@@ -31,12 +31,11 @@ export const bubbleSort = () => (dispatch, getState) => {
         type: UPDATE_DATA,
         payload: values,
       });
-      console.log(getState().dataReducer.values);
     } else {
       clearInterval(bubbleInterval);
       dispatch({
         type: UPDATE_WORKING,
       });
     }
-  }, 1000);
+  }, 50);
 };

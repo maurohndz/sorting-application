@@ -7,7 +7,8 @@ import {
 } from "../types/index.types";
 
 const INITIAL_STATE = {
-  amount_of_values: 20,
+  change: false,
+  amount_of_values: 14,
   working: false,
   values: [],
   algorithm: [
@@ -24,6 +25,7 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         values: action.payload,
+        change: !state.change,
       };
 
     case UPDATE_ALGORITHM_SELECT:
