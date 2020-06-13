@@ -2,10 +2,12 @@
 import { UPDATE_AMOUNT } from "../types/index.types";
 /*___ utilities ___*/
 import { randomValues } from "../utilities/randomValues";
+import { checkData } from "../utilities/checkData";
 
 export const generateValues = (value) => (dispatch, getState) => {
   const { values, amount_of_values } = getState().dataReducer;
-  if (value) {
+  let check = checkData(values);
+  if (value && !check) {
     let new_values = randomValues(values, parseInt(value));
     let data = {
       amount: value,

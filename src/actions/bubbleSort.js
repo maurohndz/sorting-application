@@ -8,6 +8,7 @@ export const bubbleSort = () => (dispatch, getState) => {
   var number_position = 0;
 
   var bubbleInterval = setInterval(() => {
+    // debugger;
     let { values } = getState().dataReducer;
     let aux;
     if (!checkData(values)) {
@@ -16,7 +17,24 @@ export const bubbleSort = () => (dispatch, getState) => {
         next_number = 1;
       }
 
-      if (values[number_position] > values[next_number]) {
+      /*___ change color bar ___*/
+      if (number_position > 0) {
+        values[number_position - 1] = {
+          heigth: values[number_position - 1].heigth,
+          color: "normal",
+        };
+      }
+      values[number_position] = {
+        heigth: values[number_position].heigth,
+        color: "current",
+      };
+      values[next_number] = {
+        heigth: values[next_number].heigth,
+        color: "next",
+      };
+
+      /*___ change position ___*/
+      if (values[number_position].heigth > values[next_number].heigth) {
         aux = values[next_number];
         values[next_number] = values[number_position];
         values[number_position] = aux;
@@ -27,6 +45,7 @@ export const bubbleSort = () => (dispatch, getState) => {
         number_position++;
       }
 
+      /*___ send change ___*/
       dispatch({
         type: UPDATE_DATA,
         payload: values,
@@ -37,5 +56,5 @@ export const bubbleSort = () => (dispatch, getState) => {
         type: UPDATE_WORKING,
       });
     }
-  }, 50);
+  }, 30);
 };

@@ -4,6 +4,8 @@
   --green-primary: #0ed69d;
   --pink: #fa5858;
   --bars-color: #0075ff;
+  --current: #fde5a9;
+  --next: #fdb9a9;
 }
 * {
   margin: 0;

@@ -20,12 +20,30 @@ class Bars extends Component {
       <div className="bars">
         {this.props.values.map((bar, key) => {
           let h_style = {
-            height: `${bar}px`,
+            height: `${bar.heigth}px`,
+            backgroundColor: this.setColor(bar.color),
           };
           return <div className="bars-item" style={h_style} key={key}></div>;
         })}
       </div>
     );
+  };
+
+  setColor = (state) => {
+    switch (state) {
+      case "normal":
+        return "var(--bars-color)";
+
+      case "current":
+        return "var(--current)";
+
+      case "next":
+        return "var(--next)";
+
+      default:
+        console.error(new Error("the status of the bar does not exist"));
+        break;
+    }
   };
 
   render() {

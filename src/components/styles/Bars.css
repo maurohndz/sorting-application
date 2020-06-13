@@ -9,6 +9,6 @@
 .bars-item {
   width: 10%;
   max-width: 50px;
-  background-color: var(--bars-color);
+  /* background-color: var(--bars-color); */
   margin: 0 3px;
 }
