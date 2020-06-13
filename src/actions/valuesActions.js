@@ -6,7 +6,7 @@ import { randomValues } from "../utilities/randomValues";
 export const generateValues = (value) => (dispatch, getState) => {
   const { values, amount_of_values } = getState().dataReducer;
   if (value) {
-    let new_values = randomValues(values, value);
+    let new_values = randomValues(values, parseInt(value));
     let data = {
       amount: value,
       arr: new_values,

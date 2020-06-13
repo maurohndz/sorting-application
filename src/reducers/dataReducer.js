@@ -41,8 +41,8 @@ export default (state = INITIAL_STATE, action) => {
     case UPDATE_AMOUNT:
       return {
         ...state,
-        amount_of_values: action.payload.data.amount,
-        values: action.payload.data.arr,
+        amount_of_values: action.payload.amount,
+        values: action.payload.arr,
       };
 
     default:
