@@ -42,7 +42,7 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         amount_of_values: action.payload.data.amount,
-        values: action.payload.data.amount_of_values,
+        values: action.payload.data.arr,
       };
 
     default:
