@@ -23,7 +23,6 @@ class Range extends Component {
     return (
       <React.Fragment>
         <div className="range">
-          {console.log(this.props.values)}
           <input
             type="range"
             className="range-input"
