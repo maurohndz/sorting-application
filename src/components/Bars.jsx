@@ -40,8 +40,8 @@ class Bars extends Component {
       case "next":
         return "var(--next)";
 
-      case "ok":
-        return "#555";
+      case "done":
+        return "var(--green-primary)";
 
       default:
         console.error(new Error("the status of the bar does not exist"));

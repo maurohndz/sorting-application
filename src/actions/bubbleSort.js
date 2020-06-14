@@ -19,7 +19,7 @@ export const bubbleSort = () => (dispatch, getState) => {
         for (let i = max_value; i < values_length; i++) {
           values[i] = {
             ...values[i],
-            color: "ok",
+            color: "done",
           };
         }
         max_value -= 1; //exclude the last bars
@@ -74,7 +74,7 @@ export const bubbleSort = () => (dispatch, getState) => {
       for (let i = 0; i < values_length; i++) {
         values[i] = {
           ...values[i],
-          color: "ok",
+          color: "done",
         };
       }
       /*___ update color values ___*/
