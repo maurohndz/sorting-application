@@ -29,7 +29,7 @@ export const bubbleSort = () => (dispatch, getState) => {
       }
 
       /*___ apply colors to all bars ___*/
-      for (let i = 0; i < max_value; i++) {
+      for (let i = 0; i <= max_value; i++) {
         if (i === current_position) {
           values[i] = {
             ...values[i],
