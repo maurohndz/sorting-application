@@ -19,6 +19,13 @@ class Range extends Component {
     this.props.generateValues(e.target.value);
   };
 
+  disabledInput = () => {
+    if (this.props.working) {
+      return true;
+    }
+    return false;
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -30,6 +37,7 @@ class Range extends Component {
             max="60"
             value={this.props.amount_of_values || 14}
             onChange={this.handleChange}
+            disabled={this.disabledInput()}
           />
         </div>
       </React.Fragment>
