@@ -2,7 +2,7 @@ export const randomValues = (values, amount) => {
   if (values) {
     let values_len = values.length - 1;
     if (amount > values_len) {
-      for (let i = values_len; i <= amount; i++) {
+      for (let i = values_len; i < amount - 1; i++) {
         let val = Math.floor(Math.random() * (501 - 100)) + 100;
         let bar = {
           heigth: val,
@@ -17,7 +17,7 @@ export const randomValues = (values, amount) => {
     }
   } else {
     let new_values = [];
-    for (let i = 0; i <= amount; i++) {
+    for (let i = 0; i < amount - 1; i++) {
       let val = Math.floor(Math.random() * (501 - 100)) + 100;
       let bar = {
         heigth: val,

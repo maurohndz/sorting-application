@@ -26,7 +26,7 @@ class Range extends Component {
           <input
             type="range"
             className="range-input"
-            min=""
+            min="2"
             max="60"
             value={this.props.amount_of_values || 14}
             onChange={this.handleChange}

@@ -40,6 +40,9 @@ class Bars extends Component {
       case "next":
         return "var(--next)";
 
+      case "ok":
+        return "#555";
+
       default:
         console.error(new Error("the status of the bar does not exist"));
         break;
@@ -47,7 +50,12 @@ class Bars extends Component {
   };
 
   render() {
-    return <React.Fragment>{this.showBars()} </React.Fragment>;
+    return (
+      <React.Fragment>
+        {this.showBars()}
+        {console.log(this.props)}
+      </React.Fragment>
+    );
   }
 }
 /*___ mapStateToProps ___*/

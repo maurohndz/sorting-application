@@ -4,57 +4,88 @@ import { UPDATE_DATA, UPDATE_WORKING } from "../types/index.types";
 import { checkData } from "../utilities/checkData";
 
 export const bubbleSort = () => (dispatch, getState) => {
-  var next_number = 1;
-  var number_position = 0;
+  let current_position = 0;
+  let next_position = 1;
+  let values_length = getState().dataReducer.values.length;
+  let max_value = values_length - 1;
 
-  var bubbleInterval = setInterval(() => {
-    // debugger;
+  const bubbleInterval = setInterval(() => {
     let { values } = getState().dataReducer;
     let aux;
     if (!checkData(values)) {
-      if (next_number >= values.length) {
-        number_position = 0;
-        next_number = 1;
+      /*___ reset positions and change color of the last bars ___*/
+      if (next_position > max_value) {
+        /*___ change the color of the last bars ___*/
+        for (let i = max_value; i < values_length; i++) {
+          values[i] = {
+            ...values[i],
+            color: "ok",
+          };
+        }
+        max_value -= 1; //exclude the last bars
+        /*___ reset positions ___*/
+        current_position = 0;
+        next_position = 1;
       }
 
-      /*___ change color bar ___*/
-      if (number_position > 0) {
-        values[number_position - 1] = {
-          heigth: values[number_position - 1].heigth,
-          color: "normal",
-        };
+      /*___ apply colors to all bars ___*/
+      for (let i = 0; i < max_value; i++) {
+        if (i === current_position) {
+          values[i] = {
+            ...values[i],
+            color: "current",
+          };
+        }
+        if (i === next_position) {
+          values[i] = {
+            ...values[i],
+            color: "next",
+          };
+        }
+        if (i !== next_position && i !== current_position) {
+          values[i] = {
+            ...values[i],
+            color: "normal",
+          };
+        }
       }
-      values[number_position] = {
-        heigth: values[number_position].heigth,
-        color: "current",
-      };
-      values[next_number] = {
-        heigth: values[next_number].heigth,
-        color: "next",
-      };
 
-      /*___ change position ___*/
-      if (values[number_position].heigth > values[next_number].heigth) {
-        aux = values[next_number];
-        values[next_number] = values[number_position];
-        values[number_position] = aux;
-        next_number++;
-        number_position++;
+      /*___ apply change of position ___*/
+      if (values[current_position].heigth > values[next_position].heigth) {
+        aux = values[next_position];
+        values[next_position] = values[current_position];
+        values[current_position] = aux;
+
+        current_position += 1;
+        next_position += 1;
       } else {
-        next_number++;
-        number_position++;
+        current_position += 1;
+        next_position += 1;
       }
 
-      /*___ send change ___*/
+      /*___ update values ___*/
       dispatch({
         type: UPDATE_DATA,
         payload: values,
       });
     } else {
       clearInterval(bubbleInterval);
+      /*___ change color to done ___*/
+      for (let i = 0; i < values_length; i++) {
+        values[i] = {
+          ...values[i],
+          color: "ok",
+        };
+      }
+      /*___ update color values ___*/
+      dispatch({
+        type: UPDATE_DATA,
+        payload: values,
+      });
+      /*___ update status working ___*/
       dispatch({
         type: UPDATE_WORKING,
       });
     }
-  }, 30);
+  }, 40);
 };

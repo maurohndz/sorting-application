@@ -10,7 +10,7 @@ export const generateValues = (value) => (dispatch, getState) => {
   if (value && !check) {
     let new_values = randomValues(values, parseInt(value));
     let data = {
-      amount: value,
+      amount: new_values.length,
       arr: new_values,
     };
     dispatch({
@@ -20,7 +20,7 @@ export const generateValues = (value) => (dispatch, getState) => {
   } else {
     let new_values = randomValues(null, amount_of_values);
     let data = {
-      amount: value,
+      amount: new_values.length,
       arr: new_values,
     };
     dispatch({
